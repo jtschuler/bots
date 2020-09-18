@@ -39,5 +39,6 @@ Thumbs.db
 
 # Super Secret Authorization File #
 ###################################
-rrgka/authcode.txt
+rrgka/authorize.js
+
 
