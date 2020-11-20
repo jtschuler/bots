@@ -2,12 +2,12 @@
 // Copyright 2020
 
 
+const fs = require('fs');
 const Discord = require('discord.js');
-const auth = require('./authorize')
-const commandprefix = 'r-'
+const { prefix, token } = require('./config.json');
 
 
-const client = auth.authorize();
+const client = new Discord.Client();
 
 client.on('ready', () => {
 	console.log("Connected as " + client.user.tag);
@@ -21,3 +21,5 @@ client.on('message', msg => {
 		}
 	}
 });
+
+client.login(token);
