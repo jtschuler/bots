@@ -242,6 +242,8 @@ dist
 .vscode-test
 
 
-# Super Secret Authorization File #
+# Super Secret Authorization Files #
 ###################################
-rrgka/authorize.js
+*/authorize.js
+
+.project
