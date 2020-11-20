@@ -4,7 +4,7 @@
 
 const Discord = require('discord.js');
 const auth = require('./authorize')
-const commandprefix = 'r-'
+const commandprefix = '-i '
 
 
 const client = auth.authorize();
@@ -14,8 +14,9 @@ client.on('ready', () => {
 })
 
 client.on('message', msg => {
-	if (msg.content.substring(0,2) == commandprefix) {
-		command = msg.content.substring(2);
+	if (msg.content.substring(0,commandprefix.length) == commandprefix) {
+		console.log(msg.content)
+		command = msg.content.substring(commandprefix.length);
 		if (command === 'ping') {
 			msg.reply('pong');
 		}
