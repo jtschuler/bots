@@ -244,6 +244,6 @@ dist
 
 # Super Secret Authorization Files #
 ###################################
-*/config.json
+*/authorize.js
 
 .project
