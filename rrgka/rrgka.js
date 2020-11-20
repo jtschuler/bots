@@ -1,3 +1,7 @@
+// Jadon Schuler
+// Copyright 2020
+
+
 const Discord = require('discord.js');
 const auth = require('./authorize')
 const commandprefix = 'r-'
