@@ -34,20 +34,20 @@ client.on('message', message => {
 	}
 	
 	if (command.args && !args.length) {
-		let reply = 'No arguments proveded.';
+		let reply = 'No arguments provided.';
 		
-		if(command.usage) reply += '\nUsage: ' + command.usage;
+		if(command.usage) reply += '\nUsage: ' + `${prefix} ${command.name} ${command.usage}`;
 		
 		return message.channel.send(reply);
 	}
 	
-	console.log(`Command recieved: ${message.content}`)
+	console.log(`${message.author.username} on ${new Date().toLocaleString()}: ${message.content}`)
 
 	try {
 		command.execute(message, args);
 	} catch (error) {
 		console.error(error);
-		message.reply('there was an error trying to execute that command!');
+		message.reply('There was an error trying to execute that command!');
 	}
 });
 

@@ -1,14 +1,16 @@
+const { prefix } = require('../config.json');
+
 module.exports = {
 	name: 'roll',
-	description: 'Rolls the dice in the arguments',
+	description: 'Rolls one to twenty dice of size one to one hundred.',
 	args: true,
-	usage: '-i roll <#d#>',
+	usage: '<#d#>',
 	guildOnly: true,
 	execute(message, args) {
 		// Test reg exp for proepr formatting
 		var diceRE = /^[1-9]\d*d[1-9]\d*$/;
 		if (!diceRE.test(args[0]))
-			return message.channel.send(`Improper formatting.\nUsage: ${this.usage}`);
+			return message.channel.send('I\'m not sure what you wanted to roll.');
 		
 		dice = args[0].split('d');
 		numDice = dice[0];
