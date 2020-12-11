@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/jtschuler/bots#readme",
   "dependencies": {
-    "discord.js": "^12.4.1"
+    "discord.js": "^12.4.1",
+    "rcon-client": "^4.2.3"
   }
 }
