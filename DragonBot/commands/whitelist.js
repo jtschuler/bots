@@ -1,7 +1,7 @@
 // const { host, password, port } = require('../config.json');
 const host = process.env.HOST;
 const password = process.env.PASSWORD;
-const port = process.env.PORT;
+const port = process.env.MC_PORT;
 
 const Rcon = require('rcon-client').Rcon;
 
