@@ -16,7 +16,9 @@ module.exports = {
 		if(args.length > 1)
 			return message.channel.send('Please only provide one argument.');
 		
-		
+		console.log(host)
+		console.log(port)
+		console.log(password)
 		const rcon = new Rcon({ host: host, port: Number(port), password: password });
 		
 		rcon.on('authenticated', () => {
