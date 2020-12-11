@@ -1,1 +1,1 @@
-worker: node DragonBot/dragonbot.js
+worker: cd DragonBot && node dragonbot.js
