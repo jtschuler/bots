@@ -30,7 +30,7 @@ module.exports = {
 		}).then(() => {
 			rcon.end();
 		}).catch(err => {
-			message.channel.send('Server not running or authentication failure.\nError: ' + err.toString());
+			message.channel.send('Server not running or authentication failure.\n' + err.toString());
 		});
 	},
 };
