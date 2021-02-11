@@ -15,6 +15,11 @@ module.exports = {
 		
 		if (role === 'Lewd Box' || role === 'Moderator Box' || role === 'Fancy Box' || role ==='Dragon Bot' || role === 'Bot Box' || role === 'The Big Box™' || role === 'Closed Box')
 			return message.reply('I can\'t grant that role! Please talk to a moderator.');
+		
+		if (message.member.roles.cache.find(r => r.name === role)) {
+			return message.reply('You already have that role!');
+		}
+		
 		r = message.guild.roles.cache.find(r => r.name === role);
 		if (r) {
 			message.member.roles.add(r);
