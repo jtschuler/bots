@@ -8,14 +8,15 @@ module.exports = {
 	usage: '<Role Name>',
 	guildOnly: true,
 	execute(message, args) {
-		const role = message.content.slice(3).trim();
+		const role = message.content.slice(prefix.length + 2).trim();
 		if (!(message.member.roles.cache.find(r => r.name === 'Member Box') || role === 'Member Box')) {
 			return message.reply('You must have the Member Box role first!');
 		}
 		
 		if (role === 'Lewd Box' || role === 'Moderator Box' || role === 'Fancy Box' || role ==='Dragon Bot' || role === 'Bot Box' || role === 'The Big Box™' || role === 'Closed Box')
 			return message.reply('I can\'t grant that role! Please talk to a moderator.');
-		if (message.guild.roles.cache.find(r => r.name === role)) {
+		r = message.guild.roles.cache.find(r => r.name === role);
+		if (r) {
 			message.member.roles.add(r);
 			return message.reply('Role added!');
 		}
