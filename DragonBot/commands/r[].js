@@ -9,7 +9,7 @@ module.exports = {
 	guildOnly: true,
 	execute(message, args) {
 		const role = message.content.slice(3).trim();
-		if (role === 'Closed Box' || role === 'Moderator Box' || role === 'Fancy Box' || role ==='Dragon Bot' || role === 'Bot Box' || role === 'Closed Box')
+		if (role === 'Lewd Box' || role === 'Moderator Box' || role === 'Fancy Box' || role ==='Dragon Bot' || role === 'Bot Box' || role === 'The Big Box™' || role === 'Closed Box')
 			return message.reply('I can\'t remove that role! Please talk to a moderator.');
 		if (message.member.roles.cache.find(r => r.name === role)) {
 			message.member.roles.remove(r);

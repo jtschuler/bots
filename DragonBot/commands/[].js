@@ -13,7 +13,7 @@ module.exports = {
 			return message.reply('You must have the Member Box role first!');
 		}
 		
-		if (role === 'Lewd Box' || role === 'Moderator Box' || role === 'Fancy Box' || role ==='Dragon Bot' || role === 'Bot Box' || role === 'Closed Box')
+		if (role === 'Lewd Box' || role === 'Moderator Box' || role === 'Fancy Box' || role ==='Dragon Bot' || role === 'Bot Box' || role === 'The Big Box™' || role === 'Closed Box')
 			return message.reply('I can\'t grant that role! Please talk to a moderator.');
 		if (message.guild.roles.cache.find(r => r.name === role)) {
 			message.member.roles.add(r);
