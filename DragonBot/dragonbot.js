@@ -28,7 +28,10 @@ client.on('message', message => {
 	const args = message.content.slice(prefix.length).trim().split(/ +/);
 	const commandName = args.shift().toLowerCase();
 
-	if (!client.commands.has(commandName)) return;
+	if (!client.commands.has(commandName)) {
+		console.log(`Non-existant command: ${message.author.username} on ${new Date().toLocaleString()}: ${message.content}`);
+		return;
+	}
 	
 	command = client.commands.get(commandName)
 	
